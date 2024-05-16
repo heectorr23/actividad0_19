@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.empresa.actividad0_19.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
-
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.empresa.actividad0_19.HelloController">
+  <tabs>
+    <Tab text="Guardar">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="212.0" layoutY="24.0" text="Estamos en la Parte de Guardado" />
+                  <TextField fx:id="NombreGuardar" layoutX="57.0" layoutY="75.0" promptText="Indica un nombre:" />
+                  <TextField fx:id="AficionGuardar" layoutX="57.0" layoutY="127.0" promptText="Indica una afición:" />
+                   <Button fx:id="GuardarInfo" layoutX="57.0" layoutY="186.0" mnemonicParsing="false" onAction="#handleGuardarInfo" text="Guardar Información" />
+                  <Label fx:id="TiempoGuardar" layoutX="409.0" layoutY="67.0" text="Tiempo de Ejecución" />
+                  <TextArea fx:id="AreaTiempoGuardar" layoutX="364.0" layoutY="108.0" prefHeight="30.0" prefWidth="200.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Consultar">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="213.0" layoutY="31.0" text="Estamos en la Parte de Consultar" />
+                  <Label layoutX="56.0" layoutY="66.0" text="Si deseas consultar pulsa el botón" />
+                  <Label layoutX="62.0" layoutY="246.0" text="Tiempo de Ejecución" />
+                  <TextArea fx:id="AreaTiempoConsultar" layoutX="56.0" layoutY="281.0" prefHeight="37.0" prefWidth="200.0" />
+                   <Button fx:id="ConsultarInfo" layoutX="56.0" layoutY="103.0" mnemonicParsing="false" onAction="#handleConsultarInfo" text="Consultar" />
+                  <ListView fx:id="ListaConsultar" layoutX="307.0" layoutY="83.0" prefHeight="200.0" prefWidth="273.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Eliminar">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="217.0" layoutY="34.0" text="Estamos en la Parte de Eliminar" />
+                  <Label layoutX="49.0" layoutY="74.0" text="Si desea eliminar algun dato pincha sobre el" />
+                  <ListView fx:id="ListaEliminar" layoutX="43.0" layoutY="109.0" prefHeight="200.0" prefWidth="247.0" />
+                   <Button fx:id="MostrarDatosEliminar" layoutX="121.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleMostrarDatosEliminar" text="Mostrar Datos" />
+                  <Label layoutX="428.0" layoutY="74.0" text="Tiempo de Ejecución" />
+                  <TextArea fx:id="AreaTiempoEliminar" layoutX="383.0" layoutY="109.0" prefHeight="38.0" prefWidth="200.0" />
+               </children></AnchorPane>
+          </content>
+      </Tab>
+      <Tab text="Modificar">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="213.0" layoutY="40.0" text="Estamos en la Parte de Modificar" />
+                  <Label layoutX="43.0" layoutY="67.0" text="Si desea modificar algun dato pincha sobre él" />
+                  <ListView layoutX="43.0" layoutY="101.0" prefHeight="200.0" prefWidth="231.0" />
+                  <TextArea fx:id="AreaTiempoModificar" layoutX="351.0" layoutY="101.0" prefHeight="43.0" prefWidth="200.0" />
+                  <Label layoutX="437.0" layoutY="67.0" text="Tiempo de Ejecución" />
+               </children></AnchorPane>
+          </content>
+      </Tab>
+  </tabs>
+</TabPane>
